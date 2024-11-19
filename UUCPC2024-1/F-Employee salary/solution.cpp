@@ -18,14 +18,14 @@ void solve(){
     for(ll i{}; i < n; ++i) cin >> name[i] >> salary[i];
 
     auto binarySearch = [&](const ll val){
-        ll l{}, r{n - 1}, idx{n};
+        ll l{}, r{n - 1}, idx{-1};
         while(l <= r){
             ll mid{(l + r) / 2};
-            if(salary[mid] > val){
+            if(salary[mid] <= val){
                 idx = mid;
-                r = mid - 1;
+                l = mid + 1;
             }
-            else l = mid + 1;
+            else r = mid - 1;
         }
 
         return idx;
@@ -35,7 +35,7 @@ void solve(){
         ll curr{};
         cin >> curr;
 
-        ll idx{binarySearch(curr) - 1};
+        ll idx{binarySearch(curr)};
         if(~idx) cout << name[idx] << ' ' << salary[idx] << '\n';
         else cout << -1 << '\n';
     }
