@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
 #define IO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-#define long long int;
 
 using namespace std;
 

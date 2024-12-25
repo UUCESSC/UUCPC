@@ -2,7 +2,6 @@
 
 #define fastio ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 #define shuf(a) shuffle(a.begin(), a.end(), default_random_engine(0));
-#define long long int
 #define endl "\n"
 
 using namespace std;
